@@ -7,20 +7,25 @@
 body {
     font-family: 'Lexend Deca', sans-serif;
     height: 100vh;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     color: white;
 }
 
 .card {
-    width: 80%;
+    width: 90%;
     display: grid;
-    /* grid-template-columns: repeat(3, auto); */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, auto);
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     max-width: 1000px;
-    margin: 100px auto 0;
-    /* height: 500px; */
+}
+
+@media (max-width:999px) {
+    .card {
+        max-width: 800px;
+        width: 100%;
+    }
 }
 
 #sedans {
@@ -64,12 +69,11 @@ p {
 a {
     display: inline-block;
     background-color: #fff;
-    padding: 0.9rem 2.3rem;
+    padding: 0.9rem 2.4rem;
     cursor: pointer;
-    border-radius: 21px;
+    border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 700;
-    /* width: max-content; */
     text-decoration: none;
     transition: 0.3s all linear;
 }
@@ -90,4 +94,20 @@ a {
     color: hsla(0, 0%, 100%, 0.75);
     border: 2px solid white;
     background-color: transparent;
+}
+
+@media (max-width:800px) {
+    body {
+        height: auto;
+    }
+    .card {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+    #sedans {
+        border-radius: 10px 10px 0 0;
+    }
+    #luxury {
+        border-radius: 0 0 10px 10px;
+    }
 }

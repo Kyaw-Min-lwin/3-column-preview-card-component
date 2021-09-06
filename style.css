@@ -64,6 +64,7 @@ a {
     background-color: #fff;
     padding: 0.9rem 2.4rem;
     cursor: pointer;
+    border: 2px solid white;
     border-radius: 25px;
     font-size: 0.9rem;
     font-weight: 700;
@@ -85,7 +86,6 @@ a {
 
 #luxury a:hover, #sedans a:hover, #suvs a:hover {
     color: hsla(0, 0%, 100%, 0.75);
-    border: 2px solid white;
     background-color: transparent;
 }
 
